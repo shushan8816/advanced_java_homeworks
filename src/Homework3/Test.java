@@ -6,7 +6,7 @@ public class Test {
 
     public static void main(String[] args) throws ParseException {
         System.out.println("Timer ran ");
-        MyTimer timer = new MyTimer();
-        timer.run();
+        Thread t = new Thread( new MyTimer());
+        t.start();
     }
 }
