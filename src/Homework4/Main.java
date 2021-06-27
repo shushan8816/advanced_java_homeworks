@@ -9,14 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        File dir = Test.getDir();
-
-        long fileSize = Test.getFileSize(dir);
-
-        DecimalFormat df = new DecimalFormat("0.00");
-
-        System.out.println("Folder size: " + df.format((double) fileSize / 1024) + "kB" + "(" + fileSize + "byte)");
-
+        MyThread t = new MyThread();
+        t.start();
     }
 }
 

@@ -1,7 +1,6 @@
 package Homework4;
 
 import java.io.File;
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Test {
@@ -19,30 +18,8 @@ public class Test {
             }
         }
     }
-
-    public static long getFileSize(File dir) {
-        long size = 0;
-        if (dir.isFile()) {
-            return dir.length();
-        } else {
-            File[] subFiles = dir.listFiles();
-            if (subFiles != null) {
-                for (File subFile : subFiles) {
-                    if (subFile.isFile()) {
-                        size = size + getFileSize(subFile);
-                        System.out.println(size/1024 + " KB");
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-            return size;
-        }
-    }
 }
+
 
 
 
