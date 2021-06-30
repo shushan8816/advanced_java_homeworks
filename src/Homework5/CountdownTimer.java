@@ -49,7 +49,7 @@ public class CountdownTimer extends JFrame implements ActionListener {
         startResetButton.addActionListener(this);
         running = false;
         seconds = 0;
-        timer = new Timer(500, this);
+        timer = new Timer(1000, this);
         update();
 
         pack();
